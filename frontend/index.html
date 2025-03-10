@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-Market</title>
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/common.js" defer></script>
 </head>
 <body>
     <header class="header">
+        <!-- <div id="navbar-container"></div> Navbar will be loaded here -->
         <nav class="navbar">
             <img src="images/popmarketlogo.png" alt="Pop-Market Logo" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Market</a></li>
-                <li><a href="#">Catalog</a></li>
-                <li><a href="#">My Collection</a></li>
-                <li><a href="#">Wish List</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="collection.html">My Collection</a></li>
+                <li><a href="wishlist.html">Wish List</a></li>
             </ul>
             <div class="auth-buttons">
-                <button class="login">Log In</button>
-                <button class="logout">Log Out</button>
+                <a href="login.html"><button class="login">Log In</button></a>
+                <button class="logout">Log Out</button> <!-- Will need JavaScript for actual logout functionality -->
             </div>
         </nav>
         <img src="images/banner.jpeg" alt="Funko Pops Banner" class="banner">
@@ -42,9 +45,17 @@
         </section>
     </main>
 
-    <footer>
-        <div>About POP-Market</div>
-        <div>Contact us</div>
+    <!-- <div id="footer-container"></div> Footer will be loaded here -->
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <a href="about.html">About Pop-Market</a>
+                <span class="divider">|</span>
+                <a href="contactus.html">Contact Us</a>
+            </nav>
+            <p>© 2025 Pop-Market. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
