@@ -10,11 +10,13 @@ h1 {
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ✅ Fixes large gaps */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    align-items: start;
+    justify-content: center; /* ✅ Centers cards when fewer are shown */
 }
 
 .pop-card {
@@ -24,6 +26,14 @@ h1 {
     padding: 15px;
     text-align: center;
     transition: transform 0.2s;
+    
+    /* Ensure all cards are equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push text to bottom */
+    height: 100%;
+    max-width: 250px; /* ✅ Prevents width from growing */
+    width: 100%; /* ✅ Keeps cards uniform */
 }
 
 .pop-card:hover {
@@ -32,16 +42,33 @@ h1 {
 
 .pop-card img {
     max-width: 100%;
-    height: auto;
+    height: 275px; /* Adjust image size */
+    object-fit: contain; /* Keeps image aspect ratio */
     border-radius: 5px;
 }
 
 .pop-card h3 {
-    margin: 10px 0 5px;
+    margin-top: auto; /* Pushes text to bottom */
     font-size: 18px;
 }
 
 .pop-card p {
     font-size: 14px;
     color: #666;
+    margin: 5px 0;
+}
+
+.catalog-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.catalog-filters input,
+.catalog-filters select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
