@@ -5,43 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-Market</title>
     <link rel="stylesheet" href="css/common.css"> <!-- General Styles -->
-    <link rel="stylesheet" href="css/navbar.css"> <!-- Navbar Styles -->
+    <link rel="stylesheet" href="css/login.css"> <!-- Navbar Styles -->
+    <script src="js/common.js"></script> <!-- for Navbar and Footer -->
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <img src="images/popmarketlogo.png" alt="Pop-Market Logo" class="logo">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="market.html">Market</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="collection.html">My Collection</a></li>
-            <li><a href="wishlist.html">Wish List</a></li>
-        </ul>
-        <div class="auth-buttons">
-            <a href="login.html"><button class="login">Log In</button></a>
-            <button class="logout">Log Out</button> <!-- Will need JavaScript for logout -->
-        </div>
-    </nav>
+    <div id="navbar-container"></div> <!-- Navbar will be loaded here--> 
+
 
     <!-- Main Content (Replace this with page-specific content) -->
     <main>
-        <h1>Page Title</h1>
-        <p>Welcome to this page. Replace this with actual content.</p>
+        <body>
+            <div class="login-container">
+                <h2>Login to Your Account</h2>
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p class="signup-text">
+                    Don't have an account? <a href="signup.html">Sign up here</a>
+                </p>
+            </div>
+        </body>        
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <nav class="footer-nav">
-                <a href="about.html">About Pop-Market</a>
-                <span class="divider">|</span>
-                <a href="contactus.html">Contact Us</a>
-            </nav>
-            <p>© 2025 Pop-Market. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div> <!--Footer will be loaded here -->
+
 
 </body>
 </html>
