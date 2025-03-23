@@ -23,12 +23,15 @@ function displayCatalog(filteredCatalog) {
     filteredCatalog.forEach(pop => {
         const popCard = document.createElement("div");
         popCard.classList.add("pop-card");
-
+        // edit buttons to collect / sell
         popCard.innerHTML = `
             <img src="${pop.picture}" alt="${pop.pop_name}">
             <h3>${pop.pop_name}</h3>
+            <h4>${pop.serial_number}</h3>
             <p><strong>Category:</strong> ${pop.category}</p>
             <p><strong>Sub-Category:</strong> ${pop.sub_category}</p>
+            <a href="collection.html">Add to collection</a> <a href="market.html">Sell on market</a> 
+
         `;
 
         catalogContainer.appendChild(popCard);
